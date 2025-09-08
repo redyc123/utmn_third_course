@@ -1,0 +1,15 @@
+/workspaces/utmn_third_course/ATPRV/lab1/bin/Debug/net8.0/lab1
+/workspaces/utmn_third_course/ATPRV/lab1/bin/Debug/net8.0/lab1.deps.json
+/workspaces/utmn_third_course/ATPRV/lab1/bin/Debug/net8.0/lab1.runtimeconfig.json
+/workspaces/utmn_third_course/ATPRV/lab1/bin/Debug/net8.0/lab1.dll
+/workspaces/utmn_third_course/ATPRV/lab1/bin/Debug/net8.0/lab1.pdb
+/workspaces/utmn_third_course/ATPRV/lab1/obj/Debug/net8.0/lab1.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/utmn_third_course/ATPRV/lab1/obj/Debug/net8.0/lab1.AssemblyInfoInputs.cache
+/workspaces/utmn_third_course/ATPRV/lab1/obj/Debug/net8.0/lab1.AssemblyInfo.cs
+/workspaces/utmn_third_course/ATPRV/lab1/obj/Debug/net8.0/lab1.csproj.CoreCompileInputs.cache
+/workspaces/utmn_third_course/ATPRV/lab1/obj/Debug/net8.0/lab1.sourcelink.json
+/workspaces/utmn_third_course/ATPRV/lab1/obj/Debug/net8.0/lab1.dll
+/workspaces/utmn_third_course/ATPRV/lab1/obj/Debug/net8.0/refint/lab1.dll
+/workspaces/utmn_third_course/ATPRV/lab1/obj/Debug/net8.0/lab1.pdb
+/workspaces/utmn_third_course/ATPRV/lab1/obj/Debug/net8.0/lab1.genruntimeconfig.cache
+/workspaces/utmn_third_course/ATPRV/lab1/obj/Debug/net8.0/ref/lab1.dll
