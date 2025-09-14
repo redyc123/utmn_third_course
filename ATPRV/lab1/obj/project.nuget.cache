@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "C/8ei3BJTrE=",
+  "dgSpecHash": "OLjZUDW3HiM=",
   "success": true,
-  "projectFilePath": "/workspaces/utmn_third_course/ATPRV/lab1/lab1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\git-projects\\utmn_third_course\\ATPRV\\lab1\\lab1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Илья\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.19\\microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
+    "C:\\Users\\Илья\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.19\\microsoft.windowsdesktop.app.ref.8.0.19.nupkg.sha512",
+    "C:\\Users\\Илья\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.19\\microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512",
+    "C:\\Users\\Илья\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.19\\microsoft.netcore.app.host.win-x64.8.0.19.nupkg.sha512"
+  ],
   "logs": []
 }
