@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet" targetNamespace="http://tempuri.org/DataSet.xsd" xmlns:mstns="http://tempuri.org/DataSet.xsd" xmlns="http://tempuri.org/DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet" msprop:Generator_DataSetName="DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="student" msprop:Generator_RowEvHandlerName="studentRowChangeEventHandler" msprop:Generator_RowDeletedName="studentRowDeleted" msprop:Generator_RowDeletingName="studentRowDeleting" msprop:Generator_RowEvArgName="studentRowChangeEvent" msprop:Generator_TablePropName="student" msprop:Generator_RowChangedName="studentRowChanged" msprop:Generator_RowChangingName="studentRowChanging" msprop:Generator_TableClassName="studentDataTable" msprop:Generator_RowClassName="studentRow" msprop:Generator_TableVarName="tablestudent" msprop:Generator_UserTableName="student">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code" msdata:Caption="Код" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_UserColumnName="code" type="xs:long" minOccurs="0" />
+              <xs:element name="name" msdata:Caption="ФИО" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+              <xs:element name="birthday" msdata:Caption="Дата рождения" msprop:Generator_ColumnPropNameInRow="birthday" msprop:Generator_ColumnPropNameInTable="birthdayColumn" msprop:Generator_ColumnVarNameInTable="columnbirthday" msprop:Generator_UserColumnName="birthday" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="passport_series" msdata:Caption="Серия паспорта" msprop:Generator_ColumnPropNameInRow="passport_series" msprop:Generator_ColumnPropNameInTable="passport_seriesColumn" msprop:Generator_ColumnVarNameInTable="columnpassport_series" msprop:Generator_UserColumnName="passport_series" type="xs:string" minOccurs="0" />
+              <xs:element name="passport_number" msdata:Caption="Номер паспорта" msprop:Generator_ColumnPropNameInRow="passport_number" msprop:Generator_ColumnPropNameInTable="passport_numberColumn" msprop:Generator_ColumnVarNameInTable="columnpassport_number" msprop:Generator_UserColumnName="passport_number" type="xs:string" minOccurs="0" />
+              <xs:element name="passport_date" msdata:Caption="Дата выдачи" msprop:Generator_ColumnPropNameInRow="passport_date" msprop:Generator_ColumnPropNameInTable="passport_dateColumn" msprop:Generator_ColumnVarNameInTable="columnpassport_date" msprop:Generator_UserColumnName="passport_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="passport_organization" msdata:Caption="Кем выдан" msprop:Generator_ColumnPropNameInRow="passport_organization" msprop:Generator_ColumnPropNameInTable="passport_organizationColumn" msprop:Generator_ColumnVarNameInTable="columnpassport_organization" msprop:Generator_UserColumnName="passport_organization" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="check-in" msprop:Generator_RowEvHandlerName="_check_inRowChangeEventHandler" msprop:Generator_RowDeletedName="_check_inRowDeleted" msprop:Generator_RowDeletingName="_check_inRowDeleting" msprop:Generator_RowEvArgName="_check_inRowChangeEvent" msprop:Generator_TablePropName="_check_in" msprop:Generator_RowChangedName="_check_inRowChanged" msprop:Generator_RowChangingName="_check_inRowChanging" msprop:Generator_TableClassName="_check_inDataTable" msprop:Generator_RowClassName="_check_inRow" msprop:Generator_TableVarName="_tablecheck_in" msprop:Generator_UserTableName="check-in">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code" msdata:Caption="Код" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_UserColumnName="code" type="xs:long" minOccurs="0" />
+              <xs:element name="student_code" msdata:Caption="Студент" msprop:Generator_ColumnPropNameInRow="student_code" msprop:Generator_ColumnPropNameInTable="student_codeColumn" msprop:Generator_ColumnVarNameInTable="columnstudent_code" msprop:Generator_UserColumnName="student_code" type="xs:long" minOccurs="0" />
+              <xs:element name="date_in" msdata:Caption="Дата заселения" msprop:Generator_ColumnPropNameInRow="date_in" msprop:Generator_ColumnPropNameInTable="date_inColumn" msprop:Generator_ColumnVarNameInTable="columndate_in" msprop:Generator_UserColumnName="date_in" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="date_out" msdata:Caption="Дата выселения" msprop:Generator_ColumnPropNameInRow="date_out" msprop:Generator_ColumnPropNameInTable="date_outColumn" msprop:Generator_ColumnVarNameInTable="columndate_out" msprop:Generator_UserColumnName="date_out" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="name_house" msdata:Caption="общежитие" msprop:Generator_ColumnPropNameInRow="name_house" msprop:Generator_ColumnPropNameInTable="name_houseColumn" msprop:Generator_ColumnVarNameInTable="columnname_house" msprop:Generator_UserColumnName="name_house" type="xs:string" minOccurs="0" />
+              <xs:element name="adress_house" msdata:Caption="адрес общежития" msprop:Generator_ColumnPropNameInRow="adress_house" msprop:Generator_ColumnPropNameInTable="adress_houseColumn" msprop:Generator_ColumnVarNameInTable="columnadress_house" msprop:Generator_UserColumnName="adress_house" type="xs:string" minOccurs="0" />
+              <xs:element name="room_number" msdata:Caption="номер комнаты" msprop:Generator_ColumnPropNameInRow="room_number" msprop:Generator_ColumnPropNameInTable="room_numberColumn" msprop:Generator_ColumnVarNameInTable="columnroom_number" msprop:Generator_UserColumnName="room_number" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="studentKey1">
+      <xs:selector xpath=".//mstns:student" />
+      <xs:field xpath="mstns:code" />
+    </xs:unique>
+    <xs:unique name="check-inKey1">
+      <xs:selector xpath=".//mstns:check-in" />
+      <xs:field xpath="mstns:code" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="student_check-in" msdata:parent="student" msdata:child="check-in" msdata:parentkey="code" msdata:childkey="student_code" msprop:Generator_UserParentTable="student" msprop:Generator_UserChildTable="check-in" msprop:Generator_RelationVarName="_relationstudent_check_in" msprop:Generator_ChildPropName="_Getcheck_inRows" msprop:Generator_ParentPropName="studentRow" msprop:Generator_UserRelationName="student_check-in" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
