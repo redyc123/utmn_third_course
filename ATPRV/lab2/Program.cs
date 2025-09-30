@@ -266,4 +266,4 @@ static double CalculateWithStepsParallel(double a, double b, int steps, int thre
 }
 
 main1();
-// main2();
+main2();
