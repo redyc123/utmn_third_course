@@ -1,6 +1,120 @@
 ﻿using System.Diagnostics;
 
-static void main()
+static void main1()
+{
+    int[] sizes = { 1000, 2000, 3000 };
+    int[] threadCounts = { 1, 2, 4, 8, 12, 16, 20 };
+
+    foreach (int size in sizes)
+    {
+        Console.WriteLine($"\nРазмер матрицы: {size}x{size}");
+        Console.WriteLine("----------------------------------------");
+
+        var matrixA = GenerateMatrix(size);
+        var matrixB = GenerateMatrix(size);
+
+        double sequentialTime = 0;
+
+        foreach (int threads in threadCounts)
+        {
+            var stopwatch = Stopwatch.StartNew();
+
+            if (threads == 1)
+            {
+                MultiplyByRows(matrixA, matrixB, threads);
+                stopwatch.Stop();
+                sequentialTime = stopwatch.ElapsedMilliseconds;
+                Console.WriteLine($"По строкам (1 поток): {sequentialTime} мс");
+            }
+            else
+            {
+                stopwatch.Restart();
+                MultiplyByRows(matrixA, matrixB, threads);
+                stopwatch.Stop();
+                double rowTime = stopwatch.ElapsedMilliseconds;
+
+                stopwatch.Restart();
+                MultiplyByColumns(matrixA, matrixB, threads);
+                stopwatch.Stop();
+                double colTime = stopwatch.ElapsedMilliseconds;
+
+                double rowSpeedup = sequentialTime / rowTime;
+                double colSpeedup = sequentialTime / colTime;
+                double rowEfficiency = (rowSpeedup / threads) * 100;
+                double colEfficiency = (colSpeedup / threads) * 100;
+
+                Console.WriteLine($"\nПотоков: {threads}");
+                Console.WriteLine($"По строкам: {rowTime} мс, Speedup: {Math.Round(rowSpeedup, 2)}, Efficiency: {Math.Round(rowEfficiency, 2)}%");
+                Console.WriteLine($"По столбцам: {colTime} мс, Speedup: {Math.Round(colSpeedup, 2)}, Efficiency: {Math.Round(colEfficiency, 2)}%");
+            }
+        }
+    }
+}
+
+static double[,] GenerateMatrix(int size)
+{
+    double[,] matrix = new double[size, size];
+    Random random = new Random();
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+            matrix[i, j] = random.NextDouble() * 100;
+        }
+    }
+
+    return matrix;
+}
+
+static double[,] MultiplyByRows(double[,] matrixA, double[,] matrixB, int threadCount)
+{
+    int size = matrixA.GetLength(0);
+    double[,] result = new double[size, size];
+    
+    ParallelOptions options = new ParallelOptions();
+    options.MaxDegreeOfParallelism = threadCount;
+    
+    Parallel.For(0, size, options, i =>
+    {
+        for (int j = 0; j < size; j++)
+        {
+            double sum = 0;
+            for (int k = 0; k < size; k++)
+            {
+                sum += matrixA[i, k] * matrixB[k, j];
+            }
+            result[i, j] = sum;
+        }
+    });
+    
+    return result;
+}
+
+static double[,] MultiplyByColumns(double[,] matrixA, double[,] matrixB, int threadCount)
+{
+    int size = matrixA.GetLength(0);
+    double[,] result = new double[size, size];
+    
+    ParallelOptions options = new ParallelOptions();
+    options.MaxDegreeOfParallelism = threadCount;
+    
+    Parallel.For(0, size, options, j =>
+    {
+        for (int i = 0; i < size; i++)
+        {
+            double sum = 0;
+            for (int k = 0; k < size; k++)
+            {
+                sum += matrixA[i, k] * matrixB[k, j];
+            }
+            result[i, j] = sum;
+        }
+    });
+    
+    return result;
+}
+
+static void main2()
 {
     double a = 0.1;
     double b = 10.0;
@@ -151,4 +265,5 @@ static double CalculateWithStepsParallel(double a, double b, int steps, int thre
     return totalSum * h;
 }
 
-main();
+main1();
+// main2();
