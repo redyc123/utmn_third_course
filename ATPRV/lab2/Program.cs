@@ -9,7 +9,6 @@ static void main()
     int[] threadCounts = { 1, 2, 4, 8, 12, 16, 20 };
 
     Console.WriteLine("Точность\tПотоки\t\tВремя (мс)\tУскорение");
-    Console.WriteLine("---------------------------------------------------------");
 
     foreach (double accuracy in accuracies)
     {
